@@ -1,0 +1,67 @@
+<html>
+    
+      <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Document</title>
+        <style>
+          #car1{
+            position:relative;
+
+          }
+          
+        </style>
+      </head>
+      <body>
+        <p>  Jquerry...</p>
+        <p id="p1">This is paragraph 1...</p>
+        <p id="p2">This is paragraph 2...</p>
+        <!-- Enter user id<input type="text" id="t1">
+        <input type="button"id="but" value="Submit">
+        <p id="checkuser_id">Please enter user name grater than 3 alphabets and less than 10 alphabets</p> -->
+        <img src="Horse.gif" width="400" id="car1">
+        <img src="TIger.gif" width="300"id="car1">
+        <br><br><input type="button" id="but" value="Animate">
+        
+        
+        <script  src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#checkuser_id").hide();
+
+             $("#p1").click(function(){
+                console.log("Paral clicked...");
+                //alert("This is testing...")
+                $("#info").hide();
+             });
+             $("#t1").keyup(function(){
+                validate();  //cell
+             });
+
+
+
+              function validate()
+              {
+                let uname=$("#t1").val();
+                if(uname.lenght<3 || uname.lenght>10)
+              {
+                $("#character_id").hide();
+            
+              }
+            }
+        
+             $("p2").click(function(){
+                //document.write("paral2 clicked....");
+                alert("This is test...");  
+                $("#p2").text("This is edited para2...");
+
+             
+              });
+              $("#but").click(function(){
+                $("#car1").animate({left:'+=80px'},1000);
+              });
+
+              });
+    </script>
+    </body>
+</html>
